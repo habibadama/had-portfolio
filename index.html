@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav aria-label="Navigation principale">
+          <a href="#home" class="logo">HAD</a>
+  
+          <ul class="nav-links">
+            <li>
+              <a href="#home">Accueil</a>
+            </li>
+            <li>
+              <a href="#about">À propos</a>
+            </li>
+            <li>
+              <a href="#projects">Projets</a>
+            </li>
+            <li>
+              <a href="#skills">Compétences</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="home">
+        <div class="profil_info">
+          <h1>Hi guys, je suis <span class="name">Habib.</span></h1>
+          <h2 class="title">
+            Développeur Web Full Stack
+          </h2>
+          <p>
+            Passionné par l'informatique et les technologies numériques, je me spécialise dans la création de sites web et d'applications modernes.
+            Curieux, motivé et toujours à l'affût des dernières tendances, je conçois des solutions performantes, créatives et adaptées aux besoins d’aujourd’hui.
+          </p>
+          <div class="social_icons">
+            <a href="">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <div class="my_picture">
+          <img src="/images/had_pic.png" alt="Photo de HAD" title="Habib Adama DIOUMANERA"/>
+        </div>
+      </section>
+      <section id="about">
+        <h2>À propos de moi</h2>
+        <div class="about_infos_perso">
+          <div class="about_picture">
+            <img src="images/had_pic3.jpg" alt="" />
+          </div>
+          <div class="about_infos">
+            <p>
+              Je m'appelle <span style="display: inline-block; font-weight:bolder;">Habib Adama Dioumanera</span>, développeur web passionné, diplômé d’une licence en Génie Logiciel et Administration Réseau.
+            </p>
+            <p>
+              Spécialisé dans la conception de sites internet modernes, performants et orientés utilisateur, je mets mes compétences techniques et ma créativité au service de solutions web efficaces et évolutives.
+            </p>
+            <p>
+              Bien que j’aie également étudié les réseaux, mon intérêt et mon engagement se concentrent pleinement sur le développement web.
+Rigoureux, autonome et constamment en veille technologique, je cherche toujours à progresser et à répondre aux défis du web d’aujourd’hui.
+            </p>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Mes projets</h2>
+        <div class="projects-container">
+          <!-- Cartes projets ici -->
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Mes compétences</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+            <section id="contact">
+              <div class="contact-container">
+                <div class="contact-text">
+                  <h2>Contactez-moi</h2>
+                  <p>
+                    J'aimerais en savoir plus sur votre projet et sur la manière dont je pourrais vous aider.
+                    Veuillez remplir le formulaire, et je vous répondrai dans les plus brefs délais.
+                  </p>
+                </div>
+
+                <div class="contact-form">
+                  <form action="#" method="post">
+                    <div class="form-group">
+                      <input type="text" id="name" name="name" placeholder="" required>
+                      <label for="name">Nom</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" id="email" name="email" placeholder="" required>
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                      <textarea id="message" name="message" rows="4" placeholder="" required></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+  
+
+
+      <footer>
+        <p>&copy; Habib - 2025</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+
+
+
+  </body>
+</html>
