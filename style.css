@@ -381,3 +381,56 @@ footer {
 .form-group textarea:not(:placeholder-shown){
   box-shadow: 0 0 25px #6a11cb;
 }
+
+
+
+/* POJECTS*/
+#projects {
+  padding: 50px 20px;
+  /* background-color: #f9f9f9; */
+}
+
+.projects-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* auto-fit est souvent mieux ici */
+  gap: 16px;
+  margin-top: 100px;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #6a11cb;
+  font-weight: bold;
+}
