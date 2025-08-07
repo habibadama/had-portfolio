@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.skills-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.skill-circle svg {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+
+.skill-circle circle {
+  fill: none;
+  stroke-width: 8;
+  r: 35;
+  cx: 40;
+  cy: 40;
+}
+
+.skill-circle circle:first-child {
+  stroke: #eee;
+}
+
+.skill-circle circle:last-child {
+  stroke: #007bff;
+  stroke-dasharray: 219.911; /* 2 * π * r */
+  stroke-dashoffset: 219.911;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.skill-circle .percentage {
+  position: absolute;
+  top: 28px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+      <div class="skills-column">
+    <h3>Langages</h3>
+    <div class="skill-circle" data-percent="90">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">90%</div>
+      <p>HTML</p>
+    </div>
+    <div class="skill-circle" data-percent="85">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">85%</div>
+      <p>CSS</p>
+    </div>
+    <div class="skill-circle" data-percent="75">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">75%</div>
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-circle" data-percent="75">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">75%</div>
+      <p>PHP</p>
+    </div>
+    <div class="skill-circle" data-percent="75">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">75%</div>
+      <p>Python</p>
+    </div>
+  </div>
+
+  <div class="skills-column">
+    <h3>Frameworks & Outils</h3>
+    <div class="skill-circle" data-percent="90">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">90%</div>
+      <p>Bootstrap</p>
+    </div>
+    <div class="skill-circle" data-percent="85">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">85%</div>
+      <p>Symfony</p>
+    </div>
+    <div class="skill-circle" data-percent="75">
+      <svg>
+        <circle cx="40" cy="40" r="35"></circle>
+        <circle cx="40" cy="40" r="35"></circle>
+      </svg>
+      <div class="percentage">75%</div>
+      <p>Django</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const circles = document.querySelectorAll(".skill-circle");
+
+    circles.forEach(circle => {
+      const percent = circle.getAttribute("data-percent");
+      const radius = 35;
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference - (percent / 100) * circumference;
+
+      const progressCircle = circle.querySelector("svg circle:last-child");
+      progressCircle.style.strokeDashoffset = offset;
+    });
+  });
+</script>
+
+</body>
+</html>

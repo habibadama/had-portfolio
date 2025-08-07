@@ -39,3 +39,16 @@ window.addEventListener('scroll', function() {
       }, 200);
     });
   });
+
+
+
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('.nav-list');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+
+  
