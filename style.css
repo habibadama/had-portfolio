@@ -602,19 +602,27 @@ footer {
   transition: width 1s ease-out;
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 953px) {
+  body{
+    background-color: aqua;
+  }
   section:not(:first-of-type) {
     margin: 0 20px 70px;
   }
 
   .my_picture {
-    max-width: 400px;
+    max-width: 270px;
   }
 
   .profil-intro {
     max-width: 450px;
   }
-
+.profil-title {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: 300;
+    
+}
   .home-container {
     padding: 24px;
     min-height: 100vh;
@@ -622,13 +630,12 @@ footer {
   }
 
   .profil-intro h1 {
-    font-size: 4.2rem;
-    margin: 0;
+    font-size: 3rem;
   }
 
   .profil-intro p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   /* ABOUT */
@@ -642,8 +649,10 @@ footer {
 /* MEDI QUERIES */
 
 @media (max-width: 768px) {
-
-  section:not(:first-of-type) {
+/* body{
+  background-color: red;
+} */
+  /* section:not(:first-of-type) {
     margin: 0 10px 60px;
     border: 2px solid red;
   }
@@ -651,8 +660,8 @@ footer {
   section>h2 {
     font-size: 4rem;
     font-weight: 400;
-  }
-
+  } */
+/* 
   .home-container {
     justify-content: center;
     margin-top: 7rem;
@@ -665,20 +674,17 @@ footer {
   }
 
   .my_picture {
-    max-width: 350px;
-    background-color: violet;
-
+    max-width: 300px;
   }
 
   .profil-intro {
     max-width: 700px;
-    /* background-color: #2ecc71; */
     margin-bottom: 3rem;
   }
 
 .social_icons {
   justify-content: center;
-}
+} */
 
 .menu-toggle {
   display: flex;
