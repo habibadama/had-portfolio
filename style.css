@@ -6,10 +6,9 @@
 :root {
   --main-color: #6a11cb;
   --secondary-color: #2ecc71;
-  --text-color: #333;
+  --text-color: #111;
   --background-color: #fff;
   --white-color: #fff;
-  --text-color: #111;
   --font-primary: "Bebas Neue", sans-serif;
   --body-bg: #f5f7fa;
 }
@@ -602,58 +601,62 @@ footer {
   transition: width 1s ease-out;
 }
 
-@media (max-width: 1100px) {
-  body {
-    /* background-color: aqua; */
-  }
-  
-#main-container {
-    padding: 10px;
-}
-  nav {
-    height: 70px;
-  }
+/* MEDI QUERIES */
 
-  .my_picture {
-    max-width: 300px;
-  }
 
-  .profil-intro {
-    max-width: 500px;
+
+
+@media (max-width: 1199px) {
+
+  #main-container {
+    padding: 0 30px;
   }
 
   .home-container {
-    padding: 24px;
-    min-height: 100vh;
-    gap: 10px;
-    height: 70vh;
+    gap: 1.5rem;
+  }
+
+  .my_picture {
+    max-width: 370px;
   }
 
   .profil-intro h1 {
-    font-size: 3rem;
+    font-size: 4.3rem;
   }
 
-  .profil-intro p {
-    font-size: 1rem;
-    line-height: 1.5;
+  .profil-intro {
+    max-width: 570px;
   }
 
-  /* ABOUT */
+  /* SECTIONS */
   section>h2 {
-    margin-bottom: 20px;
-    font-size: 4rem;
+    font-size: 4.5rem;
+  }
+
+  #about .about_infos_perso {
+    gap: 2rem;
+  }
+}
+
+#about .about_infos_perso .about_picture {
+  max-width: 270px;
+  padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-color: beige;
   }
 }
 
 
-/* MEDI QUERIES */
 
 @media (max-width: 768px) {
-  body{
-  /* background-color: red; */
-} 
+  body {
+    /* background-color: red; */
+  }
 
-section:not(:first-of-type) {
+  section:not(:first-of-type) {
     margin: 0 10px 60px;
     /* border: 2px solid red; */
   }
@@ -662,10 +665,10 @@ section:not(:first-of-type) {
     font-size: 4rem;
     font-weight: 400;
   }
- 
+
   .home-container {
     justify-content: center;
-    margin-top: 7rem;
+    margin-top: 13rem;
     text-align: center;
   }
 
@@ -683,9 +686,10 @@ section:not(:first-of-type) {
     margin-bottom: 3rem;
   }
 
-.social_icons {
-  justify-content: center;
-} 
+  .social_icons {
+    justify-content: center;
+  }
+
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -763,4 +767,59 @@ section:not(:first-of-type) {
   nav.scrolled .menu-toggle {
     background-color: var(--white-color);
   }
+}
+
+
+
+
+
+/* Extra petit écran (max-width: 480px) */
+@media (max-width: 480px) {
+  section>h2 {
+    font-size: 3rem;
+  }
+
+  .home-container {
+    margin-top: 5rem;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .my_picture {
+    max-width: 260px;
+  }
+
+  #logo {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .profil-intro h1 {
+    font-size: 3rem;
+    margin: 5px 0;
+  }
+  #about .about_infos_perso {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #about .about_infos_perso .about_picture {
+    max-width: 100%;
+}
+.projects-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 50px;
+}
+.contact-container {
+    gap: 40px;
+    margin: 10px auto 0;
+
+}
+    .profil-intro {
+        margin-bottom: 1rem;
+    }
 }
