@@ -602,31 +602,31 @@ footer {
   transition: width 1s ease-out;
 }
 
-@media (max-width: 953px) {
-  body{
-    background-color: aqua;
+@media (max-width: 1100px) {
+  body {
+    /* background-color: aqua; */
   }
-  section:not(:first-of-type) {
-    margin: 0 20px 70px;
+  
+#main-container {
+    padding: 10px;
+}
+  nav {
+    height: 70px;
   }
 
   .my_picture {
-    max-width: 270px;
+    max-width: 300px;
   }
 
   .profil-intro {
-    max-width: 450px;
+    max-width: 500px;
   }
-.profil-title {
-    font-size: 1rem;
-    margin: 10px 0;
-    font-weight: 300;
-    
-}
+
   .home-container {
     padding: 24px;
     min-height: 100vh;
-    gap: 1rem;
+    gap: 10px;
+    height: 70vh;
   }
 
   .profil-intro h1 {
@@ -634,8 +634,8 @@ footer {
   }
 
   .profil-intro p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   /* ABOUT */
@@ -649,19 +649,20 @@ footer {
 /* MEDI QUERIES */
 
 @media (max-width: 768px) {
-/* body{
-  background-color: red;
-} */
-  /* section:not(:first-of-type) {
+  body{
+  /* background-color: red; */
+} 
+
+section:not(:first-of-type) {
     margin: 0 10px 60px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   section>h2 {
     font-size: 4rem;
     font-weight: 400;
-  } */
-/* 
+  }
+ 
   .home-container {
     justify-content: center;
     margin-top: 7rem;
@@ -684,83 +685,82 @@ footer {
 
 .social_icons {
   justify-content: center;
-} */
+} 
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+    border: 2px solid var(--main-color);
+  }
 
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 1000;
-  position: relative;
-  border: 2px solid var(--main-color);
-}
+  .menu-toggle span {
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    background-color: var(--main-color);
+  }
 
-.menu-toggle span {
-  position: absolute;
-  height: 2px;
-  width: 24px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  background-color: var(--main-color);
-}
+  .menu-toggle span:nth-child(1) {
+    top: 10px;
+  }
 
-.menu-toggle span:nth-child(1) {
-  top: 10px;
-}
+  .menu-toggle span:nth-child(2) {
+    top: 18px;
+  }
 
-.menu-toggle span:nth-child(2) {
-  top: 18px;
-}
+  .menu-toggle span:nth-child(3) {
+    top: 26px;
+  }
 
-.menu-toggle span:nth-child(3) {
-  top: 26px;
-}
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 18px;
+  }
 
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 18px;
-}
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
 
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 18px;
+  }
 
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 18px;
-}
+  /* ANIMATION DU MENU */
+  .nav-list {
+    flex-direction: column;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 
-/* ANIMATION DU MENU */
-.nav-list {
-  flex-direction: column;
-  background-color: var(--main-color);
-  position: absolute;
-  top: 75px;
-  right: 20px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 999;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
 
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
+  .nav-list.active {
+    max-height: 500px;
+    opacity: 1;
+  }
 
-.nav-list.active {
-  max-height: 500px;
-  opacity: 1;
-}
+  .nav-list.active .nav-item a {
+    color: var(--white-color);
+  }
 
-.nav-list.active .nav-item a {
-  color: var(--white-color);
-}
-
-nav.scrolled .menu-toggle {
-  background-color: var(--white-color);
-}
+  nav.scrolled .menu-toggle {
+    background-color: var(--white-color);
+  }
 }
