@@ -40,7 +40,7 @@ body {
 #main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   width: 100%;
 }
 
@@ -219,7 +219,6 @@ section>h2::after {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap-reverse;
   align-items: center;
   height: 100vh;
 }
@@ -510,14 +509,14 @@ section>h2::after {
   width: 90%;
   margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   margin-top: 100px;
 }
 
 .project-card {
   background-color: var(--white-color);
-  border: 1px solid #ddd;
+  border: 1px solid var(--main-color);
   border-radius: 10px;
   padding: 20px;
   width: 100%;
@@ -674,13 +673,12 @@ footer {
 
 /* Standard Desktops (992px - 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
-  #main-container {
+  /* #main-container {
     padding: 20px 25px;
-  }
+  } */
 
   .home-container {
-    gap: 1rem;
-    justify-content: center;
+    gap: 1.5rem;
   }
 
   .my_picture {
@@ -720,26 +718,27 @@ footer {
 /* Large Tablets (768px - 991px) */
 @media (max-width: 991px) and (min-width: 769px) {
   #main-container {
-    padding: 20px;
+    padding: 10px 20px;
+  }
+
+  section>h2 {
+    font-size: 4rem;
   }
 
   .home-container {
     justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    height: auto;
-    min-height: 100vh;
-    padding-top: 120px;
-  }
-
-  .social_icons {
-    justify-content: center;
+    gap: 1rem;
+    padding-top: 10px;
   }
 
   .about_infos_perso {
     justify-content: center;
-    text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+
+  .about_picture {
+    max-width: 250px;
+    padding: 0px;
   }
 
   .contact-container {
@@ -759,6 +758,18 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
+
+  .profil-intro {
+    max-width: 440px;
+  }
+
+  .profil-intro h1 {
+    font-size: 4rem;
+  }
+
+  .my_picture {
+    max-width: 350px;
+  }
 }
 
 /* Tablets Portrait & Mobile (768px et moins) */
@@ -767,12 +778,21 @@ footer {
   /* Mobile Navigation */
   .menu-toggle {
     display: flex;
-    border: 1px solid var(--white-color);
-    border-radius: 0;
+    border: 2px solid var(--main-color);
   }
-.menu-toggle span{
-  background-color: var(--white-color);
-}
+
+  .menu-toggle span {
+    background-color: var(--main-color);
+  }
+
+  nav.scrolled .menu-toggle {
+    border: 2px solid var(--white-color);
+  }
+
+  nav.scrolled .menu-toggle span {
+    background-color: var(--white-color);
+  }
+
   .nav-list {
     flex-direction: column;
     background-color: var(--main-color);
@@ -837,6 +857,7 @@ footer {
     height: auto;
     min-height: calc(100vh - 80px);
     text-align: center;
+    flex-wrap: wrap-reverse;
   }
 
   .profil-intro h1 {
@@ -845,7 +866,14 @@ footer {
   }
 
   .my_picture {
-    max-width: 280px;
+    max-width: 240px;
+    border: 4px solid var(--main-color);
+    transition: none;
+  }
+
+  .my_picture:hover {
+    box-shadow: none;
+    transform: none;
   }
 
   .profil-intro {
@@ -857,6 +885,12 @@ footer {
     width: 95%;
     margin-top: 60px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .about_infos_perso {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
   .contact-container {
@@ -886,6 +920,15 @@ footer {
 
   #logo {
     margin-left: 5px;
+  }
+
+  .social_icons {
+    justify-content: center;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
