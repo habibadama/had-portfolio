@@ -735,7 +735,8 @@ footer {
 
   .home-container {
     gap: 1rem;
-    padding-top: 200px;
+    /* padding-top: 70px; */
+    margin: 100px 20px 40px;
   }
 
   .about_infos_perso {
@@ -769,13 +770,16 @@ footer {
   .profil-intro {
     max-width: 440px;
   }
+  .profil-title {
+    font-size: 1rem;
+  }
 
   .profil-intro h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .my_picture {
-    max-width: 350px;
+    max-width: 300px;
   }
 }
 
