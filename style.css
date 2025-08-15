@@ -725,10 +725,17 @@ footer {
     font-size: 4rem;
   }
 
+  nav {
+    height: 65px;
+  }
+
+  .nav-list .nav-item a {
+    font-size: 18px;
+  }
+
   .home-container {
-    justify-content: center;
     gap: 1rem;
-    padding-top: 10px;
+    padding-top: 70px;
   }
 
   .about_infos_perso {
@@ -989,9 +996,9 @@ footer {
   }
 
   .home-container {
-    margin-top: 90px;
-    gap: 1.5rem;
-    padding-top: 20px;
+    /* margin-top: 90px; */
+    gap: 0;
+    padding-top: 0;
   }
 
   .my_picture {
