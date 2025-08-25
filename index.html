@@ -14,8 +14,8 @@
 <body>
   <div id="main-container">
     <header>
+      <a href="#home" id="logo">HAD</a>
       <nav aria-label="Navigation principale">
-        <a href="#home" id="logo">HAD</a>
         <div class="menu-toggle" id="menu-toggle">
           <span></span>
           <span></span>
@@ -42,8 +42,8 @@
     </header>
     <section id="home">
       <div class="home-container">
-        <div class="profil-intro">
-          <h1>Hi guys, je suis <span class="name">Habib.</span></h1>
+        <div class="profil-content reveal-on-scroll slide-left">
+          <h1>Hi guys, je suis Habib.</h1>
           <h2 class="profil-title">Développeur Web</h2>
           <p>
             Passionné par l'informatique et les technologies numériques, je me
@@ -52,7 +52,7 @@
             conçois des solutions performantes, créatives et adaptées aux
             besoins d’aujourd’hui.
           </p>
-          <div class="social_icons">
+          <div class="social-icons">
             <a href="">
               <i class="fa-brands fa-github"></i>
             </a>
@@ -64,18 +64,18 @@
             </a>
           </div>
         </div>
-        <div class="my_picture">
-          <img src="images/had-profil-picture.png" alt="Photo de profi de HAD" title="Habib Adama DIOUMANERA" />
+        <div class="profil-picture reveal-on-scroll slide-right">
+          <img src="images/profil.png" alt="Photo de profi de HAD" title="Habib Adama DIOUMANERA" />
         </div>
       </div>
     </section>
     <section id="about">
-      <h2>À propos de moi</h2>
-      <div class="about_infos_perso">
-        <div class="about_picture">
+      <h2 class="reveal-on-scroll fade-in">À propos de moi</h2>
+      <div class="about-container">
+        <div class="about-picture reveal-on-scroll slide-left">
           <img src="images/had-about.jpg" alt="" />
         </div>
-        <div class="about_infos">
+        <div class="about-me reveal-on-scroll slide-right">
           <p>
             Je m'appelle
             <span style="display: inline-block; font-weight: bolder">Habib Adama Dioumanera</span>, développeur web
@@ -99,10 +99,10 @@
       </div>
     </section>
     <section id="projects">
-      <h2>Mes projets</h2>
+      <h2 class="reveal-on-scroll fade-in">Mes projets</h2>
       <div class="projects-container">
-        <div class="project-card">
-          <img src="images/littlelemon.PNG" alt="Application météo" />
+        <div class=" reveal-on-scroll project-card">
+          <img src="images/tv.jpeg" alt="Application météo" />
           <h3>Little Lemon – Restaurant</h3>
           <p>
             Projet écrit en Python, suivant l’architecture MVT. Il affiche les
@@ -113,8 +113,8 @@
           <a href="https://github.com/habibadama/little_lemon" target="_blank">Voir sur GitHub</a>
         </div>
 
-        <div class="project-card">
-          <img src="images/clone_site_microsoft_1.PNG" alt="Portfolio personnel" />
+        <div class=" reveal-on-scroll project-card">
+          <img src="images/tv.jpeg" alt="Portfolio personnel" />
           <h3>Mon Portfolio</h3>
           <p>
             Mon site personnel responsive pour présenter mes projets et mes
@@ -122,8 +122,8 @@
           </p>
           <a href="https://github.com/tonpseudo/portfolio" target="_blank">Voir sur GitHub</a>
         </div>
-        <div class="project-card">
-          <img src="images/clone_site_microsoft_3.PNG" alt="Portfolio personnel" />
+        <div class=" reveal-on-scroll project-card">
+          <img src="images/tv.jpeg" alt="Portfolio personnel" />
           <h3>Clone de Microsoft</h3>
           <p>
             Mon site personnel responsive pour présenter mes projets et mes
@@ -135,26 +135,26 @@
     </section>
 
     <section id="education">
-      <h2>Education</h2>
+      <h2 class="reveal-on-scroll fade-in">Education</h2>
       <div class="education-container">
-        <div class="row">
-          <div class="col">
+        <div class="education-row">
+          <div class="education-col reveal-on-scroll slide-left">
             <h2 class="heading">
               <i class="fa-sharp-duotone fa-solid fa-graduation-cap"></i>
               Etudes
             </h2>
-            <div class="timeline">
+            <div class="education-timeline">
               <div class="education-item">
                 <div class="bar"></div>
                 <div class="education-date">
                   <i class="fa-regular fa-calendar-days"></i>
                   Janvier 2023 à ce jour
                 </div>
-                <h3 class="education-title">
+                <h3 class="education-degree">
                   Master 1, Méthode Informatiques Appliquées à la Gestion des
                   Entreprises (MIAGE)
                 </h3>
-                <p class="education-description">
+                <p class="education-school">
                   Université Abdelmalek Essaadi (Tanger), Maroc
                 </p>
               </div>
@@ -163,10 +163,10 @@
                   <i class="fa-regular fa-calendar-days"></i>
                   2016 - 2017
                 </div>
-                <h3 class="education-title">
+                <h3 class="education-degree">
                   Baccalauréat, série S2 (Sciences Experimentales)
                 </h3>
-                <p class="education-description">
+                <p class="education-school">
                   École Supérieure de Technologie et de Management(ESTM)
                 </p>
               </div>
@@ -175,14 +175,14 @@
                   <i class="fa-regular fa-calendar-days"></i>
                   2016 - 2017
                 </div>
-                <h3 class="education-title">
+                <h3 class="education-degree">
                   Baccalauréat, série S2 (Sciences Experimentales)
                 </h3>
-                <p class="education-description">CEM 19, dakar</p>
+                <p class="education-school">CEM 19, dakar</p>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="education-col reveal-on-scroll slide-right">
             <h2 class="heading">
               <i class="fas fa-briefcase"></i>
               Compétences
@@ -243,9 +243,9 @@
         </div>
     </section>
     <section id="contact">
-      <h2>Contactez-moi</h2>
+      <h2 class="reveal-on-scroll fade-in">Contactez-moi</h2>
       <div class="contact-container">
-        <div class="contact-text">
+        <div class="contact-text reveal-on-scroll slide-left">
           <p>
             J'aimerais en savoir plus sur votre projet et sur la manière dont
             je pourrais vous aider. Veuillez remplir le formulaire, et je vous
@@ -253,7 +253,7 @@
           </p>
         </div>
 
-        <div class="contact-form">
+        <div class="contact-form reveal-on-scroll slide-right">
           <form action="#" method="post">
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="" required />
@@ -275,6 +275,23 @@
 
     <footer>
       <p>&copy; Habib - 2025</p>
+      <ul class="footer-navlist">
+        <li>
+          <a href="#home">Accueil</a>
+        </li>
+        <li>
+          <a href="#about">À propos</a>
+        </li>
+        <li>
+          <a href="#projects">Projets</a>
+        </li>
+        <li>
+          <a href="#education">Education</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </footer>
   </div>
   <script src="script.js"></script>
