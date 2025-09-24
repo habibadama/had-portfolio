@@ -1222,6 +1222,7 @@ footer a:hover {
     flex-direction: column;
     gap: 25px;
     margin-top: 30px;
+    padding: 0;
   }
 
   .contact-text,
@@ -1230,7 +1231,9 @@ footer a:hover {
     width: 100%;
     text-align: center;
   }
-
+.contact-form form {
+    padding: 10px;
+}
   .form-group input,
   .form-group textarea {
     padding: 14px 10px 8px;
@@ -1240,6 +1243,10 @@ footer a:hover {
   .form-group label {
     font-size: 14px;
   }
+.contact-form button {
+    align-self: stretch;
+    width: 100%;
+}
 
   /* NAV LIST EN MODE MODAL */
   .nav-list {
@@ -1345,7 +1352,7 @@ footer a:hover {
   }
 
   .profil-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.3;
   }
 
